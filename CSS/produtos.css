@@ -108,8 +108,7 @@ text-decoration: underline;
 footer {
 
     text-align: center;
-    background: #211e1e;
-    /* background: url("imagens/bg.jpg"); */
+    background-image: url(../imagens/bg.jpg);
     padding: 40px 0;
 
 }
