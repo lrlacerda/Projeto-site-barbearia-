@@ -219,6 +219,7 @@ td, th {
 	clear: left; /*limpar o float do .utensilios (o float interfere em todos os elementos entao so para ficar na imagem temos que limpar ele nos outros) */
 	/*color: rgb(red, green, blue); transformar em rgb*/
 	color: rgba(0, 0, 0, 0.6); /*para opacificar (pode  ser usado em qualqer elemento*/
+	/* text-shadow: 2px 2px yellow; (para fazer a sombra no texto)*/
 
 }
 
@@ -277,6 +278,7 @@ p:first-line {  /*primeira linha em Italico*/
 
     padding: 3em 0;
 	background: #888888;
+	/*box-shadow: inset 0 0 30px #FF0000; (inset paraa fazer uma sombra interna, vai ser colocada apartir do centro)*/
 
 }
 
@@ -318,6 +320,8 @@ p:first-line {  /*primeira linha em Italico*/
 	width: 60%;
 	opacity: 1; /*opacidade do elemento, vai de 1 a 0*/
 	transition: 400ms;
+	box-shadow: 10px 10px 5px 10px #000000, -10px -10px yellow; /*tem eixo x e y (ex.10px 10px que esta ai do lado e o 5px espalha a sambra dando outro efeito que não o solido, 10px expande a sombra, -10px do eixo e a cor adicionamos mais sombras)*/
+
 }
 
 .imagem-beneficios:hover { /*opacifica quando o mouse fica em cina do elemento*/
@@ -388,3 +392,36 @@ footer {
 
 	background: orange;
 } */
+
+@media screen and (max-width: 480px) { /*configurar uso para celular*/
+
+	body {
+
+		background: red;
+	}
+
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video { /*o video tem que arrumar no html 100% no iframe dele*/
+
+		width: auto; /*mudar somente a largura da caixa*/
+
+	}
+
+	h1 {
+
+		text-align: center;
+
+	}
+
+	nav {
+
+		position: static; /*troca a posição que estava absolut para static*/
+
+	}
+
+	.lista-beneficios, .imagem-beneficios { /*vai deixar umem baixo do outro*/
+
+		width: 100%;
+
+	}
+	
+}
